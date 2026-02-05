@@ -9,7 +9,7 @@ export {
 
 export {
   display,
-  mailchimp,
+  // mailchimp,
   routes,
   protectedRoutes,
   baseURL,
