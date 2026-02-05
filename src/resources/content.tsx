@@ -190,10 +190,10 @@ const about: About = {
         role: "Cloud Computing Cohort",
         achievements: [
           <div style={{textAlign: 'justify'}}>
-            FinSight is an all-in-one investment intelligence platform designed
+            FinSight is an all in one investment intelligence platform designed
             to bridge the gap between complex market data and actionable
             investor decisions. By combining machine learning with
-            community-driven analytics, the platform empowers users to navigate
+            community driven analytics, the platform empowers users to navigate
             the stock market with confidence.
           </div>,
           <div style={{textAlign: 'justify'}}>
