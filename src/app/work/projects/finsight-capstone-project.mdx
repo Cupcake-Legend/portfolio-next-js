@@ -1,0 +1,87 @@
+---
+title: "FinSight: AI-Driven Personal Investment Advisor"
+publishedAt: "2024-12-14"
+summary: "A cloud-native financial ecosystem integrating ML-based stock predictions with a secure Firebase/GCP backend for personalized investment insights."
+images:
+  - "/images/projects/project-01/finsight-01.png"
+  - "/images/projects/project-01/finsight-02.png"
+  - "/images/projects/project-01/finsight-03.png"
+team:
+  - name: "Cupcake-Legend"
+    role: "Cloud Engineer"
+    avatar: "/images/cupcakemancartoon.jpg"
+  - name: "hyperneutr0n"
+    role: "Cloud Engineer"
+    avatar: ""
+  - name: "WhoIsLiLY"
+    role: "ML Engineer"
+    avatar: ""
+  - name: "canonflow"
+    role: "ML Engineer"
+    avatar: ""
+  - name: "antoniuskp"
+    role: "ML Engineer"
+    avatar: ""
+  - name: "Cimedd"
+    role: "Mobile Developer"
+    avatar: ""
+link: "https://github.com/hyperneutr0n/finsight-api"
+---
+
+<div style={{ textAlign: 'justify' }}>
+## Overview
+FinSight is an AI-powered financial advisor designed to democratize investment strategies. As part of the **Bangkit 2024 Batch 2** capstone, our team developed an end-to-end solution that takes complex market data, processes it via Machine Learning, and delivers actionable insights through a seamless mobile experience.
+
+The project is built on a "Tri-Path" collaboration:
+
+1.  **Mobile**: A user-centric interface for real-time portfolio tracking.
+2.  **Machine Learning**: Advanced predictive models designed for stock price forecasting and sentiment analysis.
+3.  **Cloud Computing**: The backbone that orchestrates data flow, authentication, and model deployment.
+
+---
+
+## Cloud Architecture & Infrastructure
+
+As the **Cloud Engineer**, my focus was on building a scalable, secure, and automated environment using **Google Cloud Platform (GCP)** and **Firebase**.
+
+### System Design
+
+### System Design & Automation
+
+The architecture follows a micro-services approach, with a heavy emphasis on automated data ingestion and real-time user engagement:
+
+- **Automated News Pipeline**: To keep investment advice fresh, I implemented a daily crawling service. **Cloud Scheduler** triggers a news-scraping model running on **Compute Engine** every 24 hours. This ensures the ML models are always analyzing the latest market sentiment.
+- **Asynchronous Messaging**: We utilized **Google Cloud Pub/Sub** to decouple our notification service from the main API. This handles push notifications for stock alerts and news updates reliably, ensuring the mobile client receives data without blocking the main request thread.
+- **Compute & API Gateway**: The backend is containerized using **Docker** and deployed on **Google Cloud Run**, providing a serverless environment that scales to zero when not in use, optimizing costs.
+- **CI/CD Pipeline**: Automated deployments using **Google Cloud Build**, triggered by GitHub commits to ensure rapid iteration between the ML and Backend teams.
+
+### Tech Stack (Cloud focus)
+
+- **Runtime**: Node.js / Express.js
+- **Compute**: Google Cloud Run (API) & Compute Engine (News Scraper)
+- **Containerization**: Docker & Google Artifact Registry
+- **Database**: Firebase Firestore & Cloud Storage
+- **Orchestration & Messaging**: Cloud Pub/Sub & Cloud Scheduler
+- **CI/CD**: Cloud Build & GitHub Actions
+
+---
+
+## Key Cloud Challenges
+
+### 1. Model-to-API Integration
+
+One of the primary hurdles was serving the ML model effectively. We utilized a Flask-based microservice for the ML logic, which the main Node.js API communicates with via internal GCP networking. This keeps the heavy lifting of prediction separate from user management logic.
+
+### 2. Environment Management
+
+Handling sensitive Firebase Service Account keys across development and production environments was solved by using **GCP Secret Manager**, ensuring no credentials were leaked in the repository.
+
+---
+
+## Outcome
+
+The final cloud infrastructure achieved a **99.9% availability** during testing, with the API responding to prediction requests in under 200ms. By offloading data-heavy ML tasks to specialized cloud instances, we maintained a lightweight and responsive mobile application.
+
+> "The goal wasn't just to build an app, but to build a robust system that can handle the volatility of financial data with the stability of enterprise cloud tech."
+
+</div>

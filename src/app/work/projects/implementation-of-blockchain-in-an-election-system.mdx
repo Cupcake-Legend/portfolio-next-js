@@ -1,0 +1,55 @@
+---
+title: "Hybrid Blockchain-Based Voting & TPS Management"
+publishedAt: "2025-07-10"
+summary: "A secure, transparent voting system leveraging Hyperledger Fabric to decentralize electoral data at the TPS level."
+images:
+  - "/images/projects/project-01/votechain-architecture.png"
+  - "/images/projects/project-01/votechain1.png"
+  - "/images/projects/project-01/votechain3.png"
+  - "/images/projects/project-01/votechain0.png"
+  - "/images/projects/project-01/votechain2.png"
+
+team:
+  - name: "Cupcake-Legend"
+    role: "Software Engineer"
+    avatar: "/images/cupcakemancartoon.jpg"
+link: "https://github.com/Cupcake-Legend/voting-application-blockchain"
+---
+
+<div style={{ textAlign: 'justify' }}>
+## Overview
+A hybrid blockchain application developed to enhance the integrity of electoral processes. By utilizing Hyperledger Fabric, the system decentralizes the management of *Tempat Pemungutan Suara* (TPS) data, ensuring that every vote cast is immutable and transparent. The project addresses common electoral vulnerabilities such as data tampering and unauthorized record modification by shifting from a centralized database to a distributed ledger.
+
+## Key Features
+
+* **TPS Asset Management**: Automated registration of individual TPS units, including voter capacity limits and real-time result tracking.
+* **Immutable Voter-to-TPS Mapping**: Implemented a registration logic that prevents duplicate voter IDs across different TPS assets. Once a voter is assigned, their cryptographic identity is anchored to a specific TPS.
+* **Digital Attendance (Cast Vote)**: Voters utilize the application to mark attendance. This "Cast Vote" action serves as a digital signature of presence, updating their "HasVoted" status on the blockchain in real-time.
+* **Integrity Cross-Checking**: The system features a validation gate where the total votes submitted for candidates (Paslon A and B) must exactly match the number of digital attendance markers recorded. If the count deviates, the blockchain rejects the result submission.
+* **Immutable Voter Records**: Secure registration of voters to specific TPS units, utilizing blockchain to track "HasVoted" status to prevent double-voting.
+* **Real-Time Result Synchronization**: Updates vote counts for candidates (Paslon) through smart contract logic, ensuring that the tally remains consistent across all network peers.
+* **Hybrid Architecture**: Combines a high performance Express.js REST API with Hyperledger Fabric chaincode to bridge the gap between user accessibility and blockchain security.
+* **Transparent Audit Trail**: Every transaction from voter registration to the final tally is recorded on the ledger, allowing for a complete, tamper-proof electoral audit.
+
+## Technologies Used
+
+* **Hyperledger Fabric**: The core permissioned blockchain framework used for creating the ledger and smart contracts.
+* **JavaScript (Chaincode)**: Developed the business logic for managing TPS assets and vote counting.
+* **Express.js**: Acts as the REST API gateway, allowing external applications to interact with the blockchain network via the Fabric Gateway SDK.
+* **Docker**: Used for containerizing the network peers, ordering services, and Certificate Authorities (CAs).
+* **Node.js**: The primary runtime environment for both the chaincode and the API middleware.
+
+* **Laravel**: Serves as the primary client-side access point, managing the user interface and initiating communication with the blockchain.
+* **MySQL**: The relational database management system used to store and organize structured land certificate data alongside the ledger.
+
+## Challenges and Learnings
+
+The primary challenge was ensuring **data consistency** between the relational database and the blockchain. During the registration phase, the system had to handle "Partial Success" scenarios where a user might be saved in MySQL but fail in the blockchain. This was resolved by implementing strict exception handling and check-loops in the Laravel Seeders. 
+
+Furthermore, designing the **cross-check consensus** was critical. By shifting the "consensus" from a technical protocol to a business logic requirement (Attendance == Tally), the system effectively prevents "ghost votes." Testing revealed that this logic effectively blocked result submissions where physical tallies were inflated beyond the number of voters who actually checked in via the app.
+
+## Outcome
+
+The hybrid blockchain system successfully demonstrates a scalable model for modernizing electoral infrastructure. By isolating voter data and results within TPS-specific assets, the system reduces the risk of bulk data manipulation. The result is a robust, verifiable voting framework that increases citizen trust and provides election officials with a single, immutable source of truth for electoral results.
+
+</div>
