@@ -18,7 +18,7 @@ link: "https://github.com/Cupcake-Legend/landchain-chaincode"
 <div style={{ textAlign: 'justify' }}>
 ## Overview
 
-This project involves the development of a decentralized land certificate management system to address the vulnerabilities of centralized registries, such as data manipulation and recording errors. The system leverages blockchain technology to ensure transparency, immutability, and public verifiability of land ownership.The system utilizes a document hash mechanism to secure land certificate data without exposing sensitive information on-chain. By digitizing the traditional "Safe Deposit Box" concept, the architecture ensures transparency and immutability through a verification engine that cross-references blockchain hashes with cloud database records. The system utilizes a document hash mechanism to secure land certificate data without exposing sensitive information on-chain. By digitizing the traditional "Safe Deposit Box" concept, the architecture ensures transparency and immutability through a verification engine that cross-references blockchain hashes with cloud database records.
+This project involves the development of a decentralized land certificate management system to address the vulnerabilities of centralized registries, such as data manipulation and recording errors. The system leverages blockchain technology to ensure transparency, immutability, and public verifiability of land ownership. The system utilizes a document hash mechanism to secure land certificate data without exposing sensitive information on-chain. By digitizing the traditional "Safe Deposit Box" concept, the architecture ensures transparency and immutability through a verification engine that cross references blockchain hashes with cloud and database records. 
 
 ## Key Features
 
@@ -30,13 +30,11 @@ This project involves the development of a decentralized land certificate manage
 
 * **Scalable Architecture**: Optimized the network to handle increasing peer counts. Testing proved that as the network expanded from 2 to 6 peers, transaction times actually improved by 0.62 seconds, resolving typical blockchain scalability bottlenecks.
 
-* **Performance Optimization**: Conducted scalability testing across a peer network. Results demonstrated a non-linear performance improvement, with a 6-peer configuration processing transactions 0.62 seconds faster than a 2-peer setup.
-
 * **Decentralized Verification**: Created a workflow that allows for independent verification of certificate authenticity, significantly reducing the risk of land disputes.
 
 * **Immutable Audit Trail**: Utilized blockchain to store unique document hashes, providing a tamper-proof reference point for land records.
 
-* **Multi-Layer Verification Logic**: Developed a verification engine that validates uploaded certificates by matching blockchain hashes against recalculated hashes from secure cloud databases, ensuring 100% data integrity.
+* **Multi-Layer Verification Logic**: Developed a verification engine that validates uploaded certificates by matching blockchain hashes against recalculated hashes from cloud storage and database, ensuring 100% data integrity.
 
 ## Technologies Used
 
@@ -48,9 +46,7 @@ This project involves the development of a decentralized land certificate manage
 
 ## Challenges and Learnings
 
-The primary challenge of this development was identifying a suitable consensus mechanism that accurately mirrors the existing land transaction system. Rather than focusing on standard network scalability, the research centered on a logic where the legal agreement of all involved parties is translated into digital signatures.
-
-By verifying these signatures against each other, the system establishes a distributed consensus that maintains legal validity in a digital environment. This approach demonstrated that a signature-based agreement model can enhance network performance; testing revealed that increasing the network from 2 to 6 peers improved transaction speeds by 0.62 seconds, proving that decentralized verification can optimize throughput.
+The primary challenge of this development was identifying a suitable consensus mechanism that accurately mirrors the existing land transaction system. Rather than focusing on standard network scalability, the research centered on a logic where the legal agreement of all involved parties is translated into digital signatures. By verifying these signatures against each other, the system establishes a distributed consensus that maintains legal validity in a digital environment.
 ## Outcome
-This project demonstrates the practical application of blockchain in digitizing complex legal trust structures. By transitioning from a centralized registry to a distributed signature-based consensus, the system minimizes the risk of land disputes and data forgery. The final implementation provides a transparent, verifiable audit trail that empowers the public to independently confirm the authenticity of land certificates.
+This project demonstrates the practical application of blockchain in digitizing complex legal trust structures. By transitioning from a centralized registry to a distributed signature based consensus, the system minimizes the risk of land disputes and data forgery. The final implementation provides a transparent, verifiable audit trail that empowers the public to independently confirm the authenticity of land certificates.
 </div>

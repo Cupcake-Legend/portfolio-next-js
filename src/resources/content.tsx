@@ -108,15 +108,15 @@ const about: About = {
         timeframe: "2025 - Present",
         role: "Solutions Architect & Developer",
         achievements: [
-          <>
+          <div style={{textAlign: 'justify'}}>
             Developed custom web applications for diverse business needs such as
             ERP & CRM implementations.
-          </>,
-          <>
+          </div>,
+          <div style={{textAlign: 'justify'}}>
             Interfaced with business owners to identify operational pain points
             and translated business objectives into technical project
             specifications.
-          </>,
+          </div>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -133,21 +133,21 @@ const about: About = {
         timeframe: "2025 - 2026",
         role: "Full Stack Developer Intern",
         achievements: [
-          <>
-            Developed a Laravel-based web application, managing both complex
+          <div style={{textAlign: 'justify'}}>
+            Developed a Laravel based web application, managing both complex
             backend logic and precise UI adjustments to meet project
             specifications.
-          </>,
-          <>
+          </div>,
+          <div style={{textAlign: 'justify'}}>
             Designed and optimized relational database structures tailored to
             specific organizational requirements, ensuring data integrity and
             query efficiency.
-          </>,
+          </div>,
         ],
         images: [
           {
             src: "/images/projects/project-01/ybaik.png",
-            alt: "Once UI Project",
+            alt: "Ybaik.id Project",
             width: 16,
             height: 9,
           },
@@ -158,26 +158,26 @@ const about: About = {
         timeframe: "2025 - 2026",
         role: "AI Prompt Engineer Intern",
         achievements: [
-          <>
+          <div style={{textAlign: 'justify'}}>
             Conducted extensive research on generative AI tools to develop
-            complex prompting strategies, ensuring high-fidelity output for both
+            complex prompting strategies, ensuring high fidelity output for both
             static assets and sequential video frames.
-          </>,
-          <>
+          </div>,
+          <div style={{textAlign: 'justify'}}>
             Leveraged AI models to produce marketing and educational video
             content, ensuring brand consistency and message clarity.
-          </>,
+          </div>,
         ],
         images: [
           {
             src: "/images/projects/project-01/scrooge1.jpeg",
-            alt: "Once UI Project",
+            alt: "Scrooge McDuck Illustration 1",
             width: 16,
             height: 9,
           },
           {
             src: "/images/projects/project-01/scrooge2.jpeg",
-            alt: "Once UI Project",
+            alt: "Scrooge McDuck Illustration 2",
             width: 16,
             height: 9,
           },
@@ -189,20 +189,20 @@ const about: About = {
         timeframe: "2024",
         role: "Cloud Computing Cohort",
         achievements: [
-          <>
+          <div style={{textAlign: 'justify'}}>
             FinSight is an all-in-one investment intelligence platform designed
             to bridge the gap between complex market data and actionable
             investor decisions. By combining machine learning with
             community-driven analytics, the platform empowers users to navigate
             the stock market with confidence.
-          </>,
-          <>
-            Engineered a scalable, event-driven backend on Google Cloud Platform
+          </div>,
+          <div style={{textAlign: 'justify'}}>
+            Engineered a scalable, event driven backend on Google Cloud Platform
             (GCP), orchestrating microservices via Cloud Run and Cloud Build.
             Integrated Firestore for real-time data persistence, Cloud Functions
             and Scheduler for automated web scraping workflows, and Pub/Sub for
             reliable push notification delivery to Android clients.
-          </>,
+          </div>,
         ],
         images: [
           {
@@ -248,10 +248,10 @@ const about: About = {
       {
         title: "Full Stack Development",
         description: (
-          <>
+          <div style={{textAlign: 'justify'}}>
             Building full scale applications including but not limited to:
             end-to-end design, development and deployment
-          </>
+          </div>
         ),
         tags: [
           {
@@ -311,10 +311,10 @@ const about: About = {
       {
         title: "Google Cloud",
         description: (
-          <>
+          <div style={{textAlign: 'justify'}}>
             Able to deploy, monitor, and maintain project infrastructure on
             Google Cloud, ensuring security and operational efficiency.
-          </>
+          </div>
         ),
         tags: [
           {
@@ -335,7 +335,7 @@ const about: About = {
           {
             src: "/images/projects/project-01/gcpcert.jpg",
             alt: "Project image",
-            width: 16,
+            width: 9,
             height: 9,
           },
         ],
@@ -343,11 +343,11 @@ const about: About = {
       {
         title: "MikroTik",
         description: (
-          <>
+          <div style={{textAlign: 'justify'}}>
             Able to set up Internet connectivity, configure firewalls, manage
             DHCP/NAT, and deploy basic wireless/VPN services using MikroTik
             RouterOS.
-          </>
+          </div>
         ),
         tags: [
           {
